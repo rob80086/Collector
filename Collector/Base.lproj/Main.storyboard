@@ -14,13 +14,13 @@
         <!--Collector-->
         <scene sceneID="jtv-RE-Zd8">
             <objects>
-                <tableViewController id="bAq-s6-LE4" sceneMemberID="viewController">
+                <tableViewController id="bAq-s6-LE4" customClass="ItemsTableViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bnK-Ti-EOK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LlT-GM-biE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="LlT-GM-biE">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LlT-GM-biE" id="XwN-Js-gmq">
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="814" y="8"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="RUr-DO-ZVI">
             <objects>
-                <viewController id="lyf-6z-aub" sceneMemberID="viewController">
+                <viewController id="lyf-6z-aub" customClass="AddItemViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjE-PA-oGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acY-eo-wAv">
                                 <rect key="frame" x="172" y="343.5" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="lyf-6z-aub" eventType="touchUpInside" id="XLB-VA-tWC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,10 +91,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="GpM-HR-SFV">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="nPt-JA-NQh"/>
-                            <barButtonItem systemItem="organize" id="xM6-MH-eov"/>
+                            <barButtonItem systemItem="camera" id="nPt-JA-NQh">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="lyf-6z-aub" id="Irg-ny-ZAT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="xM6-MH-eov">
+                                <connections>
+                                    <action selector="photosTapped:" destination="lyf-6z-aub" id="4rY-0d-ZOL"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemImageView" destination="lPY-eN-J9g" id="9IM-L7-Obj"/>
+                        <outlet property="titleTextField" destination="ewg-3H-3RR" id="8ix-Bl-Tg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RI1-mI-WGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

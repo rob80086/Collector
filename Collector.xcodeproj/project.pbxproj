@@ -14,6 +14,8 @@
 		D46444D11F853765009ABC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46444CF1F853765009ABC3D /* LaunchScreen.storyboard */; };
 		D46444DC1F853765009ABC3D /* CollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46444DB1F853765009ABC3D /* CollectorTests.swift */; };
 		D46444E71F853765009ABC3D /* CollectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46444E61F853765009ABC3D /* CollectorUITests.swift */; };
+		D46444F51F85458C009ABC3D /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46444F41F85458C009ABC3D /* AddItemViewController.swift */; };
+		D46444F71F855FBB009ABC3D /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46444F61F855FBB009ABC3D /* ItemsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D46444E21F853765009ABC3D /* CollectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46444E61F853765009ABC3D /* CollectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorUITests.swift; sourceTree = "<group>"; };
 		D46444E81F853765009ABC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46444F41F85458C009ABC3D /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		D46444F61F855FBB009ABC3D /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				D46444C31F853765009ABC3D /* AppDelegate.swift */,
+				D46444F61F855FBB009ABC3D /* ItemsTableViewController.swift */,
+				D46444F41F85458C009ABC3D /* AddItemViewController.swift */,
 				D46444C71F853765009ABC3D /* Main.storyboard */,
 				D46444CD1F853765009ABC3D /* Assets.xcassets */,
 				D46444CF1F853765009ABC3D /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				D46444CC1F853765009ABC3D /* Collector.xcdatamodeld in Sources */,
 				D46444C41F853765009ABC3D /* AppDelegate.swift in Sources */,
+				D46444F71F855FBB009ABC3D /* ItemsTableViewController.swift in Sources */,
+				D46444F51F85458C009ABC3D /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
